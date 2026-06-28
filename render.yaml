@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: zenesg-api
+    runtime: python
+    pythonVersion: "3.11"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api:app --host 0.0.0.0 --port $PORT
+
+  - type: worker
+    name: zenesg-scheduler
+    runtime: python
+    pythonVersion: "3.11"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scheduler.py
