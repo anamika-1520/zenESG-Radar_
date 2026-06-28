@@ -26,3 +26,9 @@ data/
 
 .DS_Store
 Thumbs.db
+.env
+chroma_db/
+__pycache__/
+*.db
+venv/
+.venv/
